@@ -1,0 +1,7 @@
+branch_code,product_code,available_qty,in_transit_qty,reserved_qty
+BAKU,PRD001,120,20,5
+BAKU,PRD002,80,10,4
+GANJA,PRD001,60,15,3
+GANJA,PRD003,45,5,2
+SUMQAYIT,PRD002,50,8,1
+

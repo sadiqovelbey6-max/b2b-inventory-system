@@ -1,0 +1,5 @@
+code,name,description,category,price,unit,barcode,imageUrl
+PRD001,"Ofis Kağızı A4","80 qram ofis kağızı","Ofis ləvazimatı",9.5,qutu,869123456001,"https://example.com/images/a4-paper.jpg"
+PRD002,"Marker Qara","Taxta və kağız üçün qara marker","Yazı aksesuarı",2.5,"ədəd",869123456002,"https://example.com/images/black-marker.jpg"
+PRD003,"Qələm HB","HB sərtlikdə qələm","Yazı aksesuarı",0.6,"ədəd",869123456003,"https://example.com/images/pencil-hb.jpg"
+

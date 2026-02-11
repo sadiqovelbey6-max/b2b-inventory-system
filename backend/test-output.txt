@@ -1,0 +1,50 @@
+﻿
+> backend@0.0.1 test
+> jest
+
+node.exe : PASS src/modules/notifications/notifications.service.spec.ts
+At line:1 char:1
++ & "C:\Program Files\nodejs/node.exe" "C:\Program Files\nodejs/node_mo ...
++ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (PASS src/module...service.spec.ts:String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+PASS src/app.controller.spec.ts
+PASS src/modules/notifications/listeners/order-notification.listener.spec.ts
+[Nest] 14720  - 11/11/2025, 10:54:50 PM   DEBUG [OrderNotificationListener] Order order-1 ├╝├º├╝n bildiri┼ƒ g├╢nd╔Örilm╔Öy╔Öc╔Ök, recipient siyah─▒s─▒ bo┼ƒdur
+PASS src/modules/branches/branches.service.spec.ts
+PASS src/modules/carts/carts.service.spec.ts
+PASS src/modules/inventory/inventory.service.spec.ts
+PASS src/modules/products/products.service.spec.ts
+PASS src/modules/users/users.service.spec.ts
+PASS src/modules/payments/payments.service.spec.ts
+FAIL src/modules/orders/orders.service.spec.ts
+  ΓùÅ OrdersService ΓÇ║ createOrderFromCart ΓÇ║ creates order successfully from cart
+
+    expect(jest.fn()).toHaveBeenCalledWith(...expected)
+
+    Expected: ObjectContaining {"availableQty": 7, "reservedQty": 3}
+    Received: {"availableQty": 10, "id": "inv-1", "reservedQty": 3}
+
+    Number of calls: 1
+
+      261 |       expect(result.total).toBe(46.5);
+      262 |       expect(result.items).toHaveLength(1);
+    > 263 |       expect(inventoryRepository.save).toHaveBeenCalledWith(
+          |                                        ^
+      264 |         expect.objectContaining({
+      265 |           availableQty: 7,
+      266 |           reservedQty: 3,
+
+      at Object.<anonymous> (modules/orders/orders.service.spec.ts:263:40)
+
+PASS src/modules/auth/two-factor.service.spec.ts
+PASS src/modules/auth/auth.service.spec.ts
+PASS src/modules/invoices/invoices.service.spec.ts
+PASS src/modules/import-export/import-export.service.spec.ts
+
+Test Suites: 1 failed, 13 passed, 14 total
+Tests:       1 failed, 115 passed, 116 total
+Snapshots:   0 total
+Time:        5.627 s
+Ran all test suites.

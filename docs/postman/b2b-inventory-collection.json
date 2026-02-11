@@ -1,0 +1,99 @@
+{
+  "info": {
+    "name": "B2B Inventory API",
+    "_postman_id": "d5cc0d6c-8b41-4cbd-97a3-bd36c4ca9f51",
+    "description": "Solob2b.az inventar sistemi üçün demo endpoint-lər",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "Health Check",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "{{baseUrl}}/api/health/details",
+          "host": ["{{baseUrl}}"],
+          "path": ["api", "health", "details"]
+        }
+      }
+    },
+    {
+      "name": "Login",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"email\": \"admin@demo.az\",\n  \"password\": \"Admin123!\"\n}"
+        },
+        "url": {
+          "raw": "{{baseUrl}}/api/login",
+          "host": ["{{baseUrl}}"],
+          "path": ["api", "login"]
+        }
+      }
+    },
+    {
+      "name": "Import Products",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Authorization",
+            "value": "Bearer {{accessToken}}"
+          }
+        ],
+        "body": {
+          "mode": "formdata",
+          "formdata": [
+            {
+              "key": "file",
+              "type": "file",
+              "src": "docs/examples/products.csv"
+            }
+          ]
+        },
+        "url": {
+          "raw": "{{baseUrl}}/api/admin/import/products",
+          "host": ["{{baseUrl}}"],
+          "path": ["api", "admin", "import", "products"]
+        }
+      }
+    },
+    {
+      "name": "Export Orders",
+      "request": {
+        "method": "GET",
+        "header": [
+          {
+            "key": "Authorization",
+            "value": "Bearer {{accessToken}}"
+          }
+        ],
+        "url": {
+          "raw": "{{baseUrl}}/api/admin/export/orders.csv",
+          "host": ["{{baseUrl}}"],
+          "path": ["api", "admin", "export", "orders.csv"]
+        }
+      }
+    }
+  ],
+  "event": [],
+  "variable": [
+    {
+      "key": "baseUrl",
+      "value": "http://localhost:4000"
+    },
+    {
+      "key": "accessToken",
+      "value": ""
+    }
+  ]
+}
+

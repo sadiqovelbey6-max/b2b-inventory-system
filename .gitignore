@@ -1,0 +1,27 @@
+# node
+node_modules/
+npm-debug.log*
+pnpm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# builds
+dist/
+build/
+
+# env
+.env
+.env.local
+.env.*.local
+backend/.env
+frontend/.env
+
+# editor
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+
+# uploads
+backend/uploads/invoices/*.pdf
+
